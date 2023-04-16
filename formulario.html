@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title> form validation</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="row"> 
+
+            <div class="col bg-white p-5 rounded-end"> 
+
+                <h2 class="fw-bold text-center py-5">Formulario</h2> 
+
+                <form action="#" id='formulario'>
+                    <div class="mb-4">
+                        <label for="rut">Rut:</label>
+                        <input type="text" id="rut" name="rut" pattern="[0-9]{1,8}[-][0-9kK]{1}" placeholder="12345678-9" required>
+                        <br><br>
+                    </div>
+                    <div class="mb-4">
+                        <label for ="nombre" >Nombre</label>
+                        <input type ="text" class="form-control"  id = 'nombre' placeholder="Ingrese su nombre" required>
+                        
+                        <br><br>
+                    </div>
+                    <div class="mb-4">
+                        <label for ="apellidopaterno" >Apellido Paterno</label>
+                        <input type ="text" class="form-control" id = 'apellidopaterno' placeholder="Ingrese su apellido paterno" required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for ="apellidomaterno" >Apellido Materno</label>
+                        <input type ="text" class="form-control" id = 'apellidomaterno' placeholder="Ingrese su apellido materno"required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for ="fechanac" >Fecha Nacimiento</label>
+                        <input type ="date" class="form-control" id = 'fechanac' required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for ="edad" >Edad</label>
+                        <input type="number" id="edad" name="edad" min="18" max="35" required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">-- Seleccione una opción --</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select><br><br>
+                    </div>
+                    
+                    <div>
+                        <label for ="email" >Correo Electrónico</label>
+                        <input type ="email" class="form-control" id = 'email' placeholder="Ingrese su correo "required>
+                        <br><br>
+                    </div>
+                    
+                    <div>
+                        <label for ="celular" >Celular</label>
+                        <input type ="text" class="form-control" id = 'celular' placeholder="Ingrese su celular" required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for ="profesion" >Profesion</label>
+                        <input type ="text" class="form-control" id = 'profesion' placeholder="Ingrese su profesión" required>
+                        <br><br>
+                    </div>
+                    
+                    Motivacion para postular al trabajo: <br>
+                    <textarea name="postular" ></textarea>
+                    
+                    <input type ="submit" value ='enviar' onclick="validarNombre(); validarRut(); validarApellidoPaterno(); validarApellidoMaterno(); validarCelular()">
+                   
+            
+                </form>
+                <div id ='error'></div>
+        
+
+
+            </div>
+
+        </div>
+
+
+           
+              
+              
+
+        
+    </div>
+
+
+    
+    <script src = 'app.js'></script>
+  </body>
+</html>
